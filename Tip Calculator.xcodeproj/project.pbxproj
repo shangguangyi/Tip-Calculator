@@ -14,6 +14,7 @@
 		B4EACE7222066A1900F4A4E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4EACE7022066A1900F4A4E9 /* LaunchScreen.storyboard */; };
 		B4EACE7D22066A1A00F4A4E9 /* Tip_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EACE7C22066A1A00F4A4E9 /* Tip_CalculatorTests.swift */; };
 		B4EACE8822066A1A00F4A4E9 /* Tip_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EACE8722066A1A00F4A4E9 /* Tip_CalculatorUITests.swift */; };
+		B4EACE962206842200F4A4E9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EACE952206842200F4A4E9 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B4EACE8322066A1A00F4A4E9 /* Tip CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tip CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4EACE8722066A1A00F4A4E9 /* Tip_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip_CalculatorUITests.swift; sourceTree = "<group>"; };
 		B4EACE8922066A1A00F4A4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4EACE952206842200F4A4E9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				B4EACE6722066A1500F4A4E9 /* AppDelegate.swift */,
 				B4EACE6922066A1500F4A4E9 /* ViewController.swift */,
 				B4EACE6B22066A1500F4A4E9 /* Main.storyboard */,
+				B4EACE952206842200F4A4E9 /* SettingsViewController.swift */,
 				B4EACE6E22066A1900F4A4E9 /* Assets.xcassets */,
 				B4EACE7022066A1900F4A4E9 /* LaunchScreen.storyboard */,
 				B4EACE7322066A1900F4A4E9 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				B4EACE6A22066A1500F4A4E9 /* ViewController.swift in Sources */,
 				B4EACE6822066A1500F4A4E9 /* AppDelegate.swift in Sources */,
+				B4EACE962206842200F4A4E9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,14 +439,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LKD6L92ARV;
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.guangyishang.Tip-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = GuangyiShang.MyFirstApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,14 +458,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LKD6L92ARV;
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.guangyishang.Tip-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = GuangyiShang.MyFirstApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
