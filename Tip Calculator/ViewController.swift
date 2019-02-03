@@ -10,10 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // fetch the tipPercentages from user defaults
+        let defaults = UserDefaults.standard
+        let lowTip = defaults.integer(forKey: "lowTip")
+        let medTip = defaults.integer(forKey: "medTip")
+        let highTip = defaults.integer(forKey: "highTip")
+        
+        // update tipControl title
+        tipControl.setTitle(String(lowTip) + "%", forSegmentAt: 0)
+        tipControl.setTitle(String(medTip) + "%", forSegmentAt: 1)
+        tipControl.setTitle(String(highTip) + "%", forSegmentAt: 2)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +43,20 @@ class ViewController: UIViewController {
     
     @IBAction func calculateTip(_ sender: Any) {
         
+        // Get default tip percentages
+        let defaults = UserDefaults.standard
+        let tipPercentages = [
+            defaults.integer(forKey: "lowTip"),
+            defaults.integer(forKey: "medTip"),
+            defaults.integer(forKey: "highTip")
+        ]
+
         // Get teh bill amount
         let bill = Double(billField.text!) ?? 0
-        
-        
+    
         // Calculate the tip and total
-        let tipPercentages = [0.15, 0.18, 0.2]
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
+        let tipPercentage = Double(tipPercentages[tipControl.selectedSegmentIndex]) / 100
+        let tip = bill * tipPercentage
         let total = bill + tip
         
         // Update teh tip and total labels
